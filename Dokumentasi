@@ -1,49 +1,32 @@
-Variabel
+Mix HTML
+===================
 
-Aturan penulisan variabel dalam PHP
-Penulisan variabel dimulai dengan tanda $
-
-===============================================
+Menggabung Kode PHP dengan HTML :
 
 <?php 
-	$a;
-	$nama;
-	$Kelas;
-	$_alamat_tinggal;
-	$TEMPAT_LAHIR;
+$nama	="Siswa Codepolitan"; 
+$alamat	="Bandung";
 ?>
+<html>
+<body>
+<h1>Selamat Datang</h1><br>
+<?php echo $nama; ?><br>
+Alamat: <?php echo $alamat; ?>
+</body>
+</html>
 
-=======PENULISAN YANG SALAH======================
+=========================================
+Menyisipkan Kode HTML didalam kode PHP
+==========================================
 
 <?php 
-	$1nama; //penulisan variabel tidak boleh diawalai dengan angka
-	$kelas**; //penulisan variabel tidak boleh mengandung spasi
-	$_tempat tinggal; //penulisan variabel tidak boleh mengandung spasi
+$nama	="<h2>Siswa Codepolitan</h2>"; 
+$alamat	="<h2>Bandung</h2>";
 ?>
-
-
-Penulisan variabel bersifat case sensitive
-===============================================
-
-<?php
-	$nama = "Roy";
-	echo $Nama;
-?>
-
-==============================================================
-Penulisan variabel tidak perlu di deklarasi terlebih dahulu
-
-var $nama = "Roy";
-	echo $nama;
-==============================================================
-
-Memberikan nilai pada variabel  :
-
-<?php
-$x 		= 100;
-$y 		= 10;
-$jumlah	= $x+$y;
-echo $jumlah;
-?>
-
-
+<html>
+<body>
+<h1>Selamat Datang</h1><br>
+<?php echo $nama; ?><br>
+<?php echo $alamat; ?>
+</body>
+</html>
