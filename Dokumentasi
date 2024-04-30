@@ -35,6 +35,14 @@ Float
 	echo $hasil;
 ?>
 
+Selain itu kita juga dapat membulatkan angka dibelakang titik desimal / koma pada tipe data float dengan menggunakan fungsi round().
+
+round(10.3333) = menghasilkan nilai 10
+round(10.5666)=menghasilkan nilai 11
+round(10.333,2)=menghasilkan 2 angka dibelakang koma yaitu 10.33
+round(10.556,1)=menghasilkan 1 angka dibelakang koma yaitu 10.6
+Fungsi round() akan membulatkan keatas jika desimal lebih dari 0,5, tetapi jika kurang dari 0,5 maka tidak akan dibulatkan ke atas.
+
 
 =======================================
 
