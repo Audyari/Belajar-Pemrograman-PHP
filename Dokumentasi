@@ -1,56 +1,54 @@
-Mengenal Fungsi
-================
+Integer Float
+=================
 
-ucwords(string)
-``
-**ucwords()** berfungsi mengkonversikan awal kalimat menjadi huruf besar.
+Macam-macam Tipe data pada PHP
+Pada PHP tipe data yang didukung antara lain :
 
-<!DOCTYPE html>
-<html>
-<body>
+String
+Interger
+Float
+Boolean
+Array
+Object
+Null
+Resource
+
+=======================================
+
+Integer
+
+<?php 
+	$a = 10;
+	$b = 11;
+	$hasil = $a * $b; //contoh perkalian
+	echo $hasil; 
+?>
+
+
+Float
+=========================================
+
 <?php
-echo ucwords("siswa codepolitan");
-?>  
-</body>
-</html>
+	$a = 1.5;
+	$b = 2.5;
+	$hasil = $a + $b; //contoh penjumlahan
+	echo $hasil;
+?>
 
-=============================================================================
 
-strtoupper() berfungsi mengkonversikan semua karakter menjadi huruf besar.
+=======================================
 
-====================
+Operator Aritmatika
 
-<!DOCTYPE html>
-<html>
-<body>
 <?php
-echo strtoupper("siswa codepolitan");
-?>  
-</body>
-</html>
-
-===================================================
-
-<!DOCTYPE html>
-<html>
-<body>
-<?php
-	phpinfo();
-?>  
-</body>
-</html>
-
-
-===============================================
-
-User Defined Function (UDF)
-
-====================================
-
- <?php
-function pesan() 
-{
-	echo "Selamat Datang Siswa Codepolitan";
-}
-pesan(); // untuk memanggil fungsi pesan
-?>  
+$a=10;
+$a++;
+echo $a; // menghasilkan nilai 11
+$b = 10;
+$b--;
+echo $b; //menghasilkan nilai 9
+$c = 10;
+$c++;
+$c++;
+echo $c;//akan menghasilkan nilai 12 karena menggunakan 2x operator increment
+?>
