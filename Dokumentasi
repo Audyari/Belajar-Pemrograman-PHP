@@ -1,62 +1,42 @@
-Integer Float
+String
+
 =================
 
-Macam-macam Tipe data pada PHP
-Pada PHP tipe data yang didukung antara lain :
-
-String
-Interger
-Float
-Boolean
-Array
-Object
-Null
-Resource
-
-=======================================
-
-Integer
-
-<?php 
-	$a = 10;
-	$b = 11;
-	$hasil = $a * $b; //contoh perkalian
-	echo $hasil; 
-?>
-
-
-Float
-=========================================
+Perbedaan Penggunaan Kutip Tunggal dengan Kutip Ganda
 
 <?php
-	$a = 1.5;
-	$b = 2.5;
-	$hasil = $a + $b; //contoh penjumlahan
-	echo $hasil;
-?>
+$nama = "Meilan";
+$pesan = "Selamat datang $nama";
+echo $pesan;
+?>  
 
-Selain itu kita juga dapat membulatkan angka dibelakang titik desimal / koma pada tipe data float dengan menggunakan fungsi round().
-
-round(10.3333) = menghasilkan nilai 10
-round(10.5666)=menghasilkan nilai 11
-round(10.333,2)=menghasilkan 2 angka dibelakang koma yaitu 10.33
-round(10.556,1)=menghasilkan 1 angka dibelakang koma yaitu 10.6
-Fungsi round() akan membulatkan keatas jika desimal lebih dari 0,5, tetapi jika kurang dari 0,5 maka tidak akan dibulatkan ke atas.
-
-
-=======================================
-
-Operator Aritmatika
+===========
 
 <?php
-$a=10;
-$a++;
-echo $a; // menghasilkan nilai 11
-$b = 10;
-$b--;
-echo $b; //menghasilkan nilai 9
-$c = 10;
-$c++;
-$c++;
-echo $c;//akan menghasilkan nilai 12 karena menggunakan 2x operator increment
+$nama = 'Meilan';
+$pesan = 'Selamat datang $nama';  ( sintak Eror )
+echo $pesan;
+?> 
+
+
+=======================
+
+Concat
+Concat digunakan untuk menggabungkan dua atau lebih string.
+
+
+//contoh1
+$nama1 = "Ridwan";
+$nama2 = "Kamal";
+$nama_lengkap = $nama1.$nama2; 
+echo $nama_lengkap; //hasilnya akan menampilkan RidwanKamal
+echo "<br>"; // pindah baris baru
+
+//contoh2
+$pesan = "Hallo"." "."Assalamualaikum";
+echo $pesan; //hasilnya akan menampilkan Hallo Assalamualaikum
+echo "<br>"; // pindah baris baru
+
+//contoh3
+echo 'Selamat '.'Datang'; //hasilnya akan menampilkan Selamat Datang
 ?>
