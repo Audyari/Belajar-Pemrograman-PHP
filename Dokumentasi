@@ -1,36 +1,49 @@
-Hello World
+Variabel
 
-<?php
-echo "Hello World";
+Aturan penulisan variabel dalam PHP
+Penulisan variabel dimulai dengan tanda $
+
+===============================================
+
+<?php 
+	$a;
+	$nama;
+	$Kelas;
+	$_alamat_tinggal;
+	$TEMPAT_LAHIR;
 ?>
 
-==========================
+=======PENULISAN YANG SALAH======================
 
-Mencetak versi PHP :
-
-<?php
-phpinfo();
+<?php 
+	$1nama; //penulisan variabel tidak boleh diawalai dengan angka
+	$kelas**; //penulisan variabel tidak boleh mengandung spasi
+	$_tempat tinggal; //penulisan variabel tidak boleh mengandung spasi
 ?>
 
-============================
-Mencetak Hasil Perhitungan
+
+Penulisan variabel bersifat case sensitive
+===============================================
 
 <?php
-echo 5*1000;
+	$nama = "Roy";
+	echo $Nama;
 ?>
 
-Menambahkan Komentar
-=============================
+==============================================================
+Penulisan variabel tidak perlu di deklarasi terlebih dahulu
+
+var $nama = "Roy";
+	echo $nama;
+==============================================================
+
+Memberikan nilai pada variabel  :
 
 <?php
-// Ini komentar 1 baris
-    
-# Ini komentar 1 baris
-    
-/*
-Ini adalah komentar
-untuk banyak
-baris
-*/  
-   echo 5*1000;
+$x 		= 100;
+$y 		= 10;
+$jumlah	= $x+$y;
+echo $jumlah;
 ?>
+
+
