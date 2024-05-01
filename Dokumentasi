@@ -1,46 +1,81 @@
-Boolean
+Array
 
-=================
+===============
+
+String namaHewan1 = "Kucing";
+String namaHewan2 = "Gajah";
+String namaHewan3 = "Buaya";
+
+
+====================
+
+Contoh : array(1,2,3,4,5) atau [1,2,3]. 
+
+==================
+
+echo $nama_array[index]; //untuk mencetak salah satu elemen array 
+print_r($nama_array); //untuk mencetak semua elemen array beserta index
+var_dump($angka); //untuk mencetak semua elemen array beserta index dan tipe data
+
+=============================
 
 <?php
-$nilai1	= 10;
-$nilai2	= 5;
-$kondisi = $nilai1>$nilai2; //cek kondisi apakah bernilai true(benar) atau false(salah)
-var_dump($kondisi);
-?>
-
-
-================
-
-<?php
-$a	= TRUE;
-$b	= "TRUE";
-var_dump($a);
+$angka 	= array(1,2,3,4,5); //kumpulan data integer
+$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
+echo $angka[1];
 echo "<br>";
-var_dump($b);
+echo $buah[3]; //mencetak array pada index ke 3
 ?>
 
-=========================
 
-Operator Perbandingan
-Operator	Nama	Contoh	Keterangan :
+=============================================
 
-==	sama dengan	$a == $b	true apabila $a sama dengan $b
-!=	tidak sama dengan	$a != $b	true apabila $a tidak sama dengan $b
-<>	tidak sama dengan	$a <>$b	true apabila $a tidak sama dengan $b
->	lebih besar dari	$a > $b	true apabila $a lebih besar dari $b
-<	lebih kecil dari	$a < $b	true apabila $a lebih kecil dari $b
->=	lebih besar / sama dengan	$a >= $b	true apabila $a lebih besar / sama dengan $b
-<=	lebih kecil / sama dengan	$a <= $b	true apabila $a lebih kecil / sama dengan $b
+<?php
+$angka 	= array(1,2,3,4,5); //kumpulan data integer
+$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
+print_r($angka);
+echo "<br>";
+print_r($buah);
+?>
 
-Operator Logika
-Operator	Nama	Contoh	Keterangan :
 
-and	And	$a and $b	true apabila keduanya ($a dan $b) bernilai true
-or	Or	$a or $b	true apabila salah satu ($a atau $b) bernilai true
-xor	Xor	$a xor $b	true apabila salah satu saja dari $a atau $b bernilai true, bukan keduanya
-&&	And	$a && $b	true apabila keduanya ($a dan $b) bernilai true
-||	Or	$a || $b	true apabila salah satu ($a atau $b) bernilai true
-!	Not	!$a	true apabila $a bernilai false
+===========================
 
-==============================
+
+<?php
+$angka 	= array(1,2,3,4,5); //kumpulan data integer
+$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
+var_dump($angka); 
+echo "<br>";
+var_dump($buah);
+?>
+
+
+================Menambah atau Mengubah Elemen Array=========================
+
+
+<?php
+$angka 	= array(1,2,3,4,5); //kumpulan data integer
+$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
+$angka[]= 6; // menambahkan data ke dalam array $angka dimana akan diletakan di index paling terak
+$buah[]	= "nangka"; 
+var_dump($angka);
+echo "<br>";
+var_dump($buah);
+?>
+
+
+==========================================
+$nama_array[noindex]= isi elemen;
+======================================
+
+<?php
+$angka 	= array(1,2,3,4,5); //kumpulan data integer
+$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
+//tuliskan nama array dan nomor index yang akan diubah, lalu isi dengan data baru
+$angka[3]	= 99;  
+$buah[2]	= "strawberry";
+var_dump($angka);
+echo "<br>";
+var_dump($buah);
+?>
