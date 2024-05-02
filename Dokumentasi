@@ -1,81 +1,60 @@
-Array
-
+Array Asosiatif
 ===============
 
-String namaHewan1 = "Kucing";
-String namaHewan2 = "Gajah";
-String namaHewan3 = "Buaya";
+$buah = array("Anggur", "Jeruk", "Strawberry");
+
+$buah[0]="Anggur";
+$buah[1]="Jeruk";
+$buah[2]="Strawberry";
 
 
-====================
+$data['nama']="Muhammad Naufal";
+$data['alamat']="Jakarta";
+$data['jenis_kelamin']="Pria";
 
-Contoh : array(1,2,3,4,5) atau [1,2,3]. 
+==================================
+Membuat Array Assosiatif : 
 
-==================
+$alamat= array(
+    			"naufal"=>"Bandung",
+				  "meilan"=>"Malang",
+				  "marimar"=>"Mexico"
+              );
 
-echo $nama_array[index]; //untuk mencetak salah satu elemen array 
-print_r($nama_array); //untuk mencetak semua elemen array beserta index
-var_dump($angka); //untuk mencetak semua elemen array beserta index dan tipe data
 
-=============================
+$alamat['naufal']="Bandung";
+$alamat['meilan']="Malang";
+$alamat['marimar']="Mexico";
 
+=======================================
 <?php
-$angka 	= array(1,2,3,4,5); //kumpulan data integer
-$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
-echo $angka[1];
-echo "<br>";
-echo $buah[3]; //mencetak array pada index ke 3
+$alamat= array(
+    			"naufal"=>"Bandung",
+				"meilan"=>"Malang",
+				"marimar"=>"Mexico"
+              );
+echo "Alamat Marimar adalah di ". $alamat['marimar'];
 ?>
 
-
-=============================================
-
-<?php
-$angka 	= array(1,2,3,4,5); //kumpulan data integer
-$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
-print_r($angka);
-echo "<br>";
-print_r($buah);
-?>
+============================================
 
 
-===========================
-
-
-<?php
-$angka 	= array(1,2,3,4,5); //kumpulan data integer
-$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
-var_dump($angka); 
-echo "<br>";
-var_dump($buah);
-?>
-
-
-================Menambah atau Mengubah Elemen Array=========================
+Perulangan / Loop pada Array Assosiatif  :
 
 
 <?php
-$angka 	= array(1,2,3,4,5); //kumpulan data integer
-$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
-$angka[]= 6; // menambahkan data ke dalam array $angka dimana akan diletakan di index paling terak
-$buah[]	= "nangka"; 
-var_dump($angka);
-echo "<br>";
-var_dump($buah);
+$alamat= array(
+    			"naufal"=>"Bandung",
+				"meilan"=>"Malang",
+				"marimar"=>"Mexico"
+              );
+
+foreach($alamat as $x => $value) 
+{
+    echo "Alamat " .$x. "  di " . $value;
+    echo "<br>";
+}
 ?>
 
 
-==========================================
-$nama_array[noindex]= isi elemen;
-======================================
-
-<?php
-$angka 	= array(1,2,3,4,5); //kumpulan data integer
-$buah	= ["pisang","anggur","apel","kiwi","nanas"]; //kumpulan data string
-//tuliskan nama array dan nomor index yang akan diubah, lalu isi dengan data baru
-$angka[3]	= 99;  
-$buah[2]	= "strawberry";
-var_dump($angka);
-echo "<br>";
-var_dump($buah);
-?>
+=================================
