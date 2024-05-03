@@ -1,60 +1,39 @@
-Array Asosiatif
-===============
+Array Multidimensi
 
-$buah = array("Anggur", "Jeruk", "Strawberry");
+=========================
 
-$buah[0]="Anggur";
-$buah[1]="Jeruk";
-$buah[2]="Strawberry";
+$mahasiswa = array
+  (
+  array("Marimar",20,"Wanita"),
+  array("Soledad",25,"Wanita"),
+  array("Alfonso",30,"Pria")
+  );
 
+=======================
 
-$data['nama']="Muhammad Naufal";
-$data['alamat']="Jakarta";
-$data['jenis_kelamin']="Pria";
-
-==================================
-Membuat Array Assosiatif : 
-
-$alamat= array(
-    			"naufal"=>"Bandung",
-				  "meilan"=>"Malang",
-				  "marimar"=>"Mexico"
-              );
-
-
-$alamat['naufal']="Bandung";
-$alamat['meilan']="Malang";
-$alamat['marimar']="Mexico";
-
-=======================================
 <?php
-$alamat= array(
-    			"naufal"=>"Bandung",
-				"meilan"=>"Malang",
-				"marimar"=>"Mexico"
-              );
-echo "Alamat Marimar adalah di ". $alamat['marimar'];
+$karnivora	=['singa','macan','serigala'];
+$herbivora	=['kuda','sapi','kambing'];
+$omnivora	=['ayam','monyet','babi'];
+$binatang	=['karnivora'=>$karnivora,'$herbivora'=>$herbivora,'$omnivora'=>$omnivora];
+echo $binatang['karnivora'][0];
 ?>
 
-============================================
-
-
-Perulangan / Loop pada Array Assosiatif  :
-
+===================================
 
 <?php
-$alamat= array(
-    			"naufal"=>"Bandung",
-				"meilan"=>"Malang",
-				"marimar"=>"Mexico"
-              );
-
-foreach($alamat as $x => $value) 
-{
-    echo "Alamat " .$x. "  di " . $value;
-    echo "<br>";
+$mahasiswa = array
+  (
+  array("Marimar",20,"Wanita"),
+  array("Soledad",25,"Wanita"),
+  array("Alfonso",30,"Pria")
+  );
+for ($baris = 0; $baris < 3; $baris++) {
+  echo "<p><b>Baris No: $baris</b></p>";
+  echo "<ul>";
+  for ($kolom = 0; $kolom < 3; $kolom++) {
+    echo "<li>".$mahasiswa[$baris][$kolom]."</li>";
+  }
+  echo "</ul>";
 }
 ?>
-
-
-=================================
