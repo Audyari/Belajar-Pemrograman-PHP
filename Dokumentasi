@@ -1,39 +1,42 @@
-If Else
+If Elseif Else
 
-=================
+====================
 
-if(kondisi){ 
-    proses yang dilakukan apabila kondisi bernilai benar (true)
+if (kondisi1) 
+{
+    proses / kode yang dijalankan apabila kondisi1 bernilai benar (true)
+}
+elseif (kondisi2) 
+{
+   proses / kode yang dijalankan apabila kondisi2 bernilai benar (true)
+} 
+else 
+{
+	proses / kode yang dijalankan apabila semua kondisi bernilai salah (false)
 }
 
-======================
+====================================
+
 
 <?php
 $nilai = 70;
-if ($nilai >= 65){ //dijalankan ketika kondisinya true
-	echo "Selamat Anda Lulus";
+if ($nilai >= 85) 
+{
+	echo "Selamat Anda mendapat Nilai A";
 }
-?>
-
-==========================
-
-if(kondisi){ 
-    proses yang dilakukan apabila kondisi bernilai benar (true).
+elseif($nilai>=70)
+{
+	echo "Selamat Anda mendapat Nilai B";
 }
-else{
-    proses yang dilakukan apabila kondisi bernilai salah (false).
+elseif($nilai>=60)
+{
+	echo "Anda mendapat Nilai C";
 }
-
-=============================
-
-<?php
-$nilai = 60;
-if ($nilai >= 65){ //dijalankan ketika kondisinya true
-	echo "Selamat Anda Lulus"; 
+else
+{  
+    echo "Anda mendapat Nilai D";
 }
-else{ //dijalankan ketika kondisinya false
-    echo "Mohon maaf Anda Tidak Lulus"; 
-}
-?>
+?
 
-=================
+
+=========================================
