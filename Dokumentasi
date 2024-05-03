@@ -1,22 +1,26 @@
-Global Variable POST
+Parsing Array
 
-========================
+=====================
 
-<html>
-<body>
-<form action="proses2.php" method="post">
+<?php
+if(!empty($_POST['proses']))
+{
+    print_r($_POST);
+}
+?>
+<form action="" method="post">
 Nama: <input type="text" name="nama">
-Alamat: <input type="text" name="alamat"><br><br>
-<input type="submit" value="submit">
+<br><br>
+Alamat: <textarea name="alamat" rows="8" col="200"></textarea>
+<br><br>
+Program Studi :
+<select name="program_studi">
+  <option value="SI">Sistem Informasi</option>
+  <option value="TI">Teknik Informatika</option>
+  <option value="MI">Manajemen Informatika</option>
+</select>
+<br><br>
+<input type="submit" name="proses" value="submit">
 </form>
-</body>
-</html>
 
-==========lanjutan code nya =============
-
-<html>
-<body>
-Selamat Datang <?php echo $_POST["nama"]; ?><br>
-Alamat Kamu: <?php echo $_POST["alamat"]; ?>
-</body>
-</html>
+============================
