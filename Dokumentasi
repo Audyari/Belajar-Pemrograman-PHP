@@ -1,40 +1,10 @@
-Query String GET
+Global Variable POST
 
-=====================
-
-<?php
-$nama 	= "Toni Haryanto";
-?>
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Selamat Datang <?php echo $nama;?></h1>
-</body>
-</html>
-
-====================================
-
-Penggunaan nya : localhost/codepolitan/GET.php?nama=Muhammad Naufal&alamat=Bandung
-
-<?php
-$nama	= $_GET['nama'];
-$alamat	= $_GET['alamat'];
-?>
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Selamat Datang <?php echo $nama;?></h1>
-<h2>Alamat Kamu adalah di : <?php echo $alamat;?></h2>
-</body>
-</html>
-
-=====================================
-
-yang ini pake method get :
+========================
 
 <html>
 <body>
-<form action="proses.php" method="get"> 
+<form action="proses2.php" method="post">
 Nama: <input type="text" name="nama">
 Alamat: <input type="text" name="alamat"><br><br>
 <input type="submit" value="submit">
@@ -42,14 +12,11 @@ Alamat: <input type="text" name="alamat"><br><br>
 </body>
 </html>
 
-=============lanjutan nya ===================
+==========lanjutan code nya =============
 
 <html>
 <body>
-Selamat Datang <?php echo $_GET["nama"]; ?><br>
-Alamat Kamu: <?php echo $_GET["alamat"]; ?>
+Selamat Datang <?php echo $_POST["nama"]; ?><br>
+Alamat Kamu: <?php echo $_POST["alamat"]; ?>
 </body>
 </html>
-
-
-====================
