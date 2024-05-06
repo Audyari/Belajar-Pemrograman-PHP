@@ -1,69 +1,55 @@
-While
+Foreach
 
-=============
+================
 
 Sintaks :
 
-while (Kondisi bernilai TRUE) 
+foreach ($array as $value) 
 {
    kode yang harus dieksekusi;
 }
 
-===============================
+================================
 
-CONTOH CODE 1 :
+CONTOH CODE : 
 
 <?php 
-$x=1;
-while ($x <= 15) 
+$arr_warna	= ['merah','biru','kuning','hitam','hijau','biru','pink','biru','jingga'];
+foreach ($arr_warna as $value) 
 {
-    echo "Nomor Antrian yang tersedia: $x <br>";
-    $x++;
+    echo "Warna saat ini adalah $value <br>";
 } 
 ?>
 
-=======CODE ke 2 : ========================
+================================================
+
+CONTOH CODE 2 :
 
 <?php
-$arr_warna	= ['merah','biru','kuning','merah','hijau','biru','merah','biru','kuning','merah','hijau','biru'];
-$jumlah	=0;
-$i		=0;
-while($i<=11)
+$arr_warna	= ['merah','biru','kuning','hitam','hijau','biru','pink','biru','jingga'];
+foreach ($arr_warna as $key=> $value) 
 {
-    if($arr_warna[$i]=='merah')
-    {
-        $jumlah++;
-    }
-    $i++;
-}
-echo "Jumlah warna merah ".$jumlah;
-?>
-
-=========================================
-
-Do.. While
-
-========================================
-
-Sintaks :
-
-do 
-{
-    kode yang harus dieksekusi;
+    echo "Warna pada elemen array ke-$key adalah $value <br>";
 } 
-while (Kondisi bernilai TRUE);
-
-
-=======================================
-
-<?php 
-$x=1;
-do
-{
-    echo "Nomor Antrian yang tersedia: $x <br>";
-    $x++;
-}
-while ($x <= 15);
 ?>
 
-==============================
+=============================================================
+
+CONTOH CODE 3 :
+
+
+<?php
+$arr_warna	= ['merah','biru','kuning','hitam','hijau','biru','pink','biru','jingga'];
+$jumlah_merah=0;
+foreach ($arr_warna as $key=> $value) 
+{
+    echo "Warna pada elemen array ke-$key adalah $value <br>";
+    if($value=='merah')
+    {
+        $jumlah_merah++;
+    }
+} 
+echo "Jumlah warna merahnya adalah $jumlah_merah";
+?>
+
+============================================================
