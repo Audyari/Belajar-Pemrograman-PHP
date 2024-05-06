@@ -1,32 +1,51 @@
-Continue
+Menampilkan Data ke Table
 
-=============
+===============================
 
-Sintaks  :
+Menampilkan Array ke dalam tabel :
 
-foreach ($array as $value) 
-{
-   if($value=='value_yang_dicari')
-   {
-       continue;   
-   }
-   kode yang harus dieksekusi; 
-}
+$karyawan=
+[
+    ['nama']=>'Naufal',['alamat']=>'Bandung',['jenis_kelamin']=>'Pria'],
+    ['nama']=>'Winda',['alamat']=>'Surabaya',['jenis_kelamin']=>'Wanita'],
+    ['nama']=>'Abyasa',['alamat']=>'Bandung',['jenis_kelamin']=>'Pria'],
+];
 
-=======================================
+==========================
 
-CONTOH CODE NYA ;
+CONTOH CODE NYA :
 
 <?php
-$arr_warna	= ['merah','biru','kuning','hitam','hijau','biru','pink','biru','jingga'];
-foreach ($arr_warna as $key=> $value) 
-{
-    if($value=='hitam')
-	{
-    continue;
-	}
-	echo "Warna pada elemen array ke-$key adalah $value <br>";
-} 
+$karyawan=
+[
+    ['nama'=>'Naufal','alamat'=>'Bandung','jenis_kelamin'=>'Pria'],
+    ['nama'=>'Winda','alamat'=>'Surabaya','jenis_kelamin'=>'Wanita'],
+    ['nama'=>'Abyasa','alamat'=>'Bandung','jenis_kelamin'=>'Pria']
+];
 ?>
+<html>
+<head></head>
+<body>
+<table border="1">
+<tr>
+    <th>Nama</th>
+    <th>Alamat</th>
+    <th>Jenis Kelamin</th>
+</tr>
+<?php 
+foreach($karyawan as $key=>$value)
+{
+?>
+<tr>
+    <td><?php echo $value['nama'];?></td>
+    <td><?php echo $value['alamat'];?></td>
+    <td><?php echo $value['jenis_kelamin'];?></td>
+</tr>
+<?php
+}
+?>
+</table>
+</body>
+</html
 
-==================================
+===========================
