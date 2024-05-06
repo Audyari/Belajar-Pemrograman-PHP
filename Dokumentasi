@@ -1,24 +1,21 @@
-Ternary Operator
+For
 
-===================
+==============
 
-Sintaks  : 
+Sintaks :
 
-<?php
-$nilai=70;
-echo ($nilai>=80)?"Anda Lulus":"Anda tidak Lulus";
+for(inisiasi; kondisi; tambah nilai) 
+{
+	kode yang harus dieksekusi;
+}
+
+======================================
+
+<?php 
+for ($x = 0; $x <= 1000; $x++) 
+{
+    echo "Nomor Antrian yang tersedia: $x <br>";
+} 
 ?>
 
-====================
-
-<?php
-$nilai=70;
-if($nilai>=80)
-{
-  echo "Anda Lulus";  
-}
-else
-{
- echo "Anda tidak Lulus"   
-}
-?>
+============================
