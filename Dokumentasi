@@ -1,42 +1,65 @@
-If Elseif Else
+If Bersarang
 
 ====================
+Sintaks : 
 
 if (kondisi1) 
 {
-    proses / kode yang dijalankan apabila kondisi1 bernilai benar (true)
-}
-elseif (kondisi2) 
-{
-   proses / kode yang dijalankan apabila kondisi2 bernilai benar (true)
+    proses / kode yang dijalankan apabila kondisi1 bernilai benar / terpenuhi
+    if(kondisi 1a)
+    {
+        kondisi1 dan kondisi 1a terpenuhi 
+        if(kondisi 1a.1)
+        {
+            kondisi1, kondisi 1a, kondisi 1a.1 terpenuhi 
+        }
+        else
+        {
+            kondisi1 dan kondisi 1a terpenuhi namun kondisi 1a.1 tidak terpenuhi 
+        }
+    }
+    else
+    {
+         kondisi1 terpenuhi namun kondisi 1a tidak terpenuhi	 
+    }  
 } 
 else 
 {
-	proses / kode yang dijalankan apabila semua kondisi bernilai salah (false)
+	proses / kode yang dijalankan apabila kondisi1 tidak terpenuhi
 }
 
-====================================
+=========================================================================
+
+CONTOH CODE NYA : 
 
 
 <?php
-$nilai = 70;
-if ($nilai >= 85) 
+$psikotes	=85;
+$wawancara	='lulus';
+$kesehatan	='tidak';
+if ($psikotes>=80) 
 {
-	echo "Selamat Anda mendapat Nilai A";
-}
-elseif($nilai>=70)
+	echo "Selamat Anda Lulus Psikotes"."<br>";
+    if($wawancara=='lulus')
+    { 
+    	echo "Selamat Anda Lulus Wawancara"."<br>";
+        if($kesehatan=='lulus')
+        {
+            echo "Selamat Anda Layak menjadi karyawan Kami";
+        }
+        else
+        {
+             echo "Mohon Maaf Anda tidak Lulus Tes Kesehatan"; 
+        }
+    }
+    else
+    {
+        echo "Mohon Maaf Anda tidak Lulus Wawancara";
+    }  
+} 
+else 
 {
-	echo "Selamat Anda mendapat Nilai B";
+	echo "Mohon Maaf Anda tidak Lulus Psikotes";
 }
-elseif($nilai>=60)
-{
-	echo "Anda mendapat Nilai C";
-}
-else
-{  
-    echo "Anda mendapat Nilai D";
-}
-?
 
-
-=========================================
+?>
