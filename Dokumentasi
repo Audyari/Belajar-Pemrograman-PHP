@@ -1,65 +1,69 @@
-If Bersarang
+Switch
 
-====================
-Sintaks : 
+===============
 
-if (kondisi1) 
+Sintaks  : 
+
+switch ($nilai) 
 {
-    proses / kode yang dijalankan apabila kondisi1 bernilai benar / terpenuhi
-    if(kondisi 1a)
-    {
-        kondisi1 dan kondisi 1a terpenuhi 
-        if(kondisi 1a.1)
-        {
-            kondisi1, kondisi 1a, kondisi 1a.1 terpenuhi 
-        }
-        else
-        {
-            kondisi1 dan kondisi 1a terpenuhi namun kondisi 1a.1 tidak terpenuhi 
-        }
-    }
-    else
-    {
-         kondisi1 terpenuhi namun kondisi 1a tidak terpenuhi	 
-    }  
-} 
-else 
-{
-	proses / kode yang dijalankan apabila kondisi1 tidak terpenuhi
+    case label1:
+        Kode yang dijalankan apabila nilai=label1
+        break;
+    case label2:
+        Kode yang dijalankan apabila nilai=label2
+        break;
+    case label3:
+        Kode yang dijalankan apabila nilai=label3
+        break;
+    ...
+    default:
+         Kode yang dijalankan apabila nilai tidak cocok dengan semua label
 }
 
-=========================================================================
+===============================
 
-CONTOH CODE NYA : 
+CONTOH CODE 1 :
 
+<?php 
+$nilai="A";
+switch($nilai)
+{
+    case 'A':
+    	echo "Nilai Anda sangat memuaskan";
+   	case 'B':
+    	echo "Nilai Anda memuaskan";
+	default :
+    	echo "Nilai tidak terdapat di database";
+}		
+?>
+
+====================================
+
+CONTOH CODE 2 : 
 
 <?php
-$psikotes	=85;
-$wawancara	='lulus';
-$kesehatan	='tidak';
-if ($psikotes>=80) 
+$nilai="A";
+switch($nilai)
 {
-	echo "Selamat Anda Lulus Psikotes"."<br>";
-    if($wawancara=='lulus')
-    { 
-    	echo "Selamat Anda Lulus Wawancara"."<br>";
-        if($kesehatan=='lulus')
-        {
-            echo "Selamat Anda Layak menjadi karyawan Kami";
-        }
-        else
-        {
-             echo "Mohon Maaf Anda tidak Lulus Tes Kesehatan"; 
-        }
-    }
-    else
-    {
-        echo "Mohon Maaf Anda tidak Lulus Wawancara";
-    }  
-} 
-else 
-{
-	echo "Mohon Maaf Anda tidak Lulus Psikotes";
+    case 'A':
+    	echo "Nilai Anda sangat memuaskan";
+   	 	break;
+   	case 'B':
+    	echo "Nilai Anda memuaskan";
+   	 	break; 
+     case 'C':
+    	echo "Nilai Anda cukup";
+   	 	break; 
+   	 case 'D':
+    	echo "Nilai Anda kurang";
+   	 	break; 
+   	 case 'E':
+    	echo "Anda tidak lulus";
+   	 	break; 
+   	 default :
+   	 	echo "Nilai tidak terdaftar";
+   	 	break;
 }
-
 ?>
+
+===============================
