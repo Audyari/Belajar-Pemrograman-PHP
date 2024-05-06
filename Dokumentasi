@@ -1,43 +1,24 @@
-Pengecekan Kondisi Ganda
+Ternary Operator
 
-=============================
+===================
 
-CONTOH CODE NYA :
+Sintaks  : 
 
 <?php
-$ukuran = 'XL';
-$warna	= 'biru';
-$biaya	= 70000;
-if($ukuran=='XL' && $warna=='merah')
+$nilai=70;
+echo ($nilai>=80)?"Anda Lulus":"Anda tidak Lulus";
+?>
+
+====================
+
+<?php
+$nilai=70;
+if($nilai>=80)
 {
-    $biaya_tambahan	= 5000;
-    $total_biaya	= $biaya+$biaya_tambahan;
-    echo "Biaya yang dikenakan adalah ".$total_biaya;
+  echo "Anda Lulus";  
 }
 else
 {
-    echo "Biaya yang dikenakan adalah ".$biaya;
+ echo "Anda tidak Lulus"   
 }
 ?>
-
-===============================================
-
-CONTOH CODE 2 : 
-
-
-<?php
-$tujuan = 'Surabaya';
-$harga	= 100000;
-$diskon	= 10000;
-
-if($tujuan=='Surabaya' || $tujuan=='Malang')
-{
-    $harga	= $harga-$diskon;
-    echo "Harga tiket adalah ".$harga;
-}
-else
-{
-	 echo "Harga tiket adalah ".$harga;
-}
-?>
-
