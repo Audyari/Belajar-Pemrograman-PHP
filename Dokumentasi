@@ -1,51 +1,73 @@
-Menampilkan Data ke Table
+Membuat Fungsi Sendiri 
 
-===============================
+==============================
 
-Menampilkan Array ke dalam tabel :
+https://www.php.net/manual/en/language.functions.php
 
-$karyawan=
-[
-    ['nama']=>'Naufal',['alamat']=>'Bandung',['jenis_kelamin']=>'Pria'],
-    ['nama']=>'Winda',['alamat']=>'Surabaya',['jenis_kelamin']=>'Wanita'],
-    ['nama']=>'Abyasa',['alamat']=>'Bandung',['jenis_kelamin']=>'Pria'],
-];
+=================================
+
+Sintaks : 
+
+function namafungsi() 
+{
+   kumpulan kode yang akan dijalankan;
+}
+
+======================
+
+Sintaks 2 :
+
+function namafungsi($parameter) 
+{
+   kumpulan kode yang akan dijalankan ;
+}
+
+=============================
+
+Sintaks 3 :
+
+function namafungsi($parameter1,$parameter2) 
+{
+   kumpulan kode yang akan dijalankan;
+}
+
+============================
+
+Contoh kode 1 :
+
+<?php
+function tulisPesan($nama) 
+{
+  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+}
+tulisPesan("Meilan");
+tulisPesan("Naufal");
+tulisPesan("Naura");
+tulisPesan("Mimi");
+?>
+
+=========================
+
+Contoh code 2 :
+
+<?php
+echo "Halo Meilan, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+echo "Halo Naufal, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+echo "Halo Naura, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+echo "Halo Mimi, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+?>
 
 ==========================
 
-CONTOH CODE NYA :
 
-<?php
-$karyawan=
-[
-    ['nama'=>'Naufal','alamat'=>'Bandung','jenis_kelamin'=>'Pria'],
-    ['nama'=>'Winda','alamat'=>'Surabaya','jenis_kelamin'=>'Wanita'],
-    ['nama'=>'Abyasa','alamat'=>'Bandung','jenis_kelamin'=>'Pria']
-];
-?>
-<html>
-<head></head>
-<body>
-<table border="1">
-<tr>
-    <th>Nama</th>
-    <th>Alamat</th>
-    <th>Jenis Kelamin</th>
-</tr>
-<?php 
-foreach($karyawan as $key=>$value)
-{
-?>
-<tr>
-    <td><?php echo $value['nama'];?></td>
-    <td><?php echo $value['alamat'];?></td>
-    <td><?php echo $value['jenis_kelamin'];?></td>
-</tr>
-<?php
-}
-?>
-</table>
-</body>
-</html
 
-===========================
+
+
+
+
+
+
+
+
+
+
