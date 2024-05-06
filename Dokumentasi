@@ -1,56 +1,69 @@
-For Array
+While
+
 =============
 
-CODE 1 : 
+Sintaks :
 
-<?php
-$arr_warna = ['merah','biru','kuning','merah','hijau','biru'];
-$jumlah = 0;
-if($arr_warna[0]=='merah')
+while (Kondisi bernilai TRUE) 
 {
-    $jumlah++;
-}
-if($arr_warna[1]=='merah')
-{
-    $jumlah++;
-}
-if($arr_warna[2]=='merah')
-{
-    $jumlah++;
-}
-if($arr_warna[3]=='merah')
-{
-    $jumlah++;
-}
-if($arr_warna[4]=='merah')
-{
-    $jumlah++;
-}
-if($arr_warna[5]=='merah')
-{
-    $jumlah++;
+   kode yang harus dieksekusi;
 }
 
-echo $jumlah;
+===============================
+
+CONTOH CODE 1 :
+
+<?php 
+$x=1;
+while ($x <= 15) 
+{
+    echo "Nomor Antrian yang tersedia: $x <br>";
+    $x++;
+} 
 ?>
 
-===================================
-
-CODE 2 : 
+=======CODE ke 2 : ========================
 
 <?php
 $arr_warna	= ['merah','biru','kuning','merah','hijau','biru','merah','biru','kuning','merah','hijau','biru'];
-$jumlah=0;
-//jumlah elemen array ada 11
-for($i=0;$i<11;$i++)
+$jumlah	=0;
+$i		=0;
+while($i<=11)
 {
     if($arr_warna[$i]=='merah')
     {
         $jumlah++;
     }
+    $i++;
 }
 echo "Jumlah warna merah ".$jumlah;
 ?>
 
+=========================================
+
+Do.. While
+
+========================================
+
+Sintaks :
+
+do 
+{
+    kode yang harus dieksekusi;
+} 
+while (Kondisi bernilai TRUE);
+
 
 =======================================
+
+<?php 
+$x=1;
+do
+{
+    echo "Nomor Antrian yang tersedia: $x <br>";
+    $x++;
+}
+while ($x <= 15);
+?>
+
+==============================
