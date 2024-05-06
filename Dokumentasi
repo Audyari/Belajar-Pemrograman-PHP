@@ -1,69 +1,43 @@
-Switch
+Pengecekan Kondisi Ganda
 
-===============
+=============================
 
-Sintaks  : 
+CONTOH CODE NYA :
 
-switch ($nilai) 
+<?php
+$ukuran = 'XL';
+$warna	= 'biru';
+$biaya	= 70000;
+if($ukuran=='XL' && $warna=='merah')
 {
-    case label1:
-        Kode yang dijalankan apabila nilai=label1
-        break;
-    case label2:
-        Kode yang dijalankan apabila nilai=label2
-        break;
-    case label3:
-        Kode yang dijalankan apabila nilai=label3
-        break;
-    ...
-    default:
-         Kode yang dijalankan apabila nilai tidak cocok dengan semua label
+    $biaya_tambahan	= 5000;
+    $total_biaya	= $biaya+$biaya_tambahan;
+    echo "Biaya yang dikenakan adalah ".$total_biaya;
 }
-
-===============================
-
-CONTOH CODE 1 :
-
-<?php 
-$nilai="A";
-switch($nilai)
+else
 {
-    case 'A':
-    	echo "Nilai Anda sangat memuaskan";
-   	case 'B':
-    	echo "Nilai Anda memuaskan";
-	default :
-    	echo "Nilai tidak terdapat di database";
-}		
+    echo "Biaya yang dikenakan adalah ".$biaya;
+}
 ?>
 
-====================================
+===============================================
 
 CONTOH CODE 2 : 
 
+
 <?php
-$nilai="A";
-switch($nilai)
+$tujuan = 'Surabaya';
+$harga	= 100000;
+$diskon	= 10000;
+
+if($tujuan=='Surabaya' || $tujuan=='Malang')
 {
-    case 'A':
-    	echo "Nilai Anda sangat memuaskan";
-   	 	break;
-   	case 'B':
-    	echo "Nilai Anda memuaskan";
-   	 	break; 
-     case 'C':
-    	echo "Nilai Anda cukup";
-   	 	break; 
-   	 case 'D':
-    	echo "Nilai Anda kurang";
-   	 	break; 
-   	 case 'E':
-    	echo "Anda tidak lulus";
-   	 	break; 
-   	 default :
-   	 	echo "Nilai tidak terdaftar";
-   	 	break;
+    $harga	= $harga-$diskon;
+    echo "Harga tiket adalah ".$harga;
+}
+else
+{
+	 echo "Harga tiket adalah ".$harga;
 }
 ?>
 
-===============================
