@@ -1,55 +1,33 @@
-Foreach
+Break
 
-================
-
+=============
 Sintaks :
 
 foreach ($array as $value) 
 {
-   kode yang harus dieksekusi;
+   if($value=='value_yang_dicari')
+   {
+          kode yang harus dieksekusi;
+          break;
+   }
 }
 
-================================
+=========================================
 
-CONTOH CODE : 
-
-<?php 
-$arr_warna	= ['merah','biru','kuning','hitam','hijau','biru','pink','biru','jingga'];
-foreach ($arr_warna as $value) 
-{
-    echo "Warna saat ini adalah $value <br>";
-} 
-?>
-
-================================================
-
-CONTOH CODE 2 :
+Penggunaan break  :
 
 <?php
 $arr_warna	= ['merah','biru','kuning','hitam','hijau','biru','pink','biru','jingga'];
+echo "Saya mencari warna hitam<br>";
 foreach ($arr_warna as $key=> $value) 
 {
     echo "Warna pada elemen array ke-$key adalah $value <br>";
-} 
-?>
-
-=============================================================
-
-CONTOH CODE 3 :
-
-
-<?php
-$arr_warna	= ['merah','biru','kuning','hitam','hijau','biru','pink','biru','jingga'];
-$jumlah_merah=0;
-foreach ($arr_warna as $key=> $value) 
-{
-    echo "Warna pada elemen array ke-$key adalah $value <br>";
-    if($value=='merah')
+    if($value=='hitam')
     {
-        $jumlah_merah++;
+        echo "<b>Nah Warna Hitam sudah ditemukan! Dia berada pada indeks ke-$key</b>";
+        break;
     }
 } 
-echo "Jumlah warna merahnya adalah $jumlah_merah";
 ?>
 
-============================================================
+=============================================
