@@ -1,45 +1,23 @@
-Parameter Referensi
+Menulis Dan Membaca File
 
-============================
+==============================
 
-Sintaks :
+Membuat File :
 
 <?php
-function gantiNama(&$nama)
-{
-    $nama="Indah";
-}
-$nama="Risa";
-gantiNama($nama);
-echo $nama;
+$pesan="Ini hasil membuat file melalui PHP";
+file_put_contents("file.txt",$pesan);
 ?>
 
-=============================
+===============================
 
-CODE 2 :
-
-<?php
-function gantiNama(&$nama)
-{
-    $nama="Indah";
-}
-$nama="Risa";
-gantiNama($nama);
-echo $nama;
-?> 
-
-============================
-
-CODE 3 : 
+Membaca File :
 
 <?php
-function gantiNama($nama)
-{
-    $nama="Indah";
-}
-$nama="Risa";
-gantiNama($nama);
-echo $nama;
-?> 
+$pesan="Ini hasil membuat file melalui PHP";
+file_put_contents("file.txt",$pesan);
+$isi_file = file_get_contents("file.txt");
+echo $isi_file;
+?>
 
-============================
+======================
