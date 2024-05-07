@@ -1,58 +1,45 @@
-Skup Variabel
+Mengembalikan Hasil Proses Fungsi
 
-====================
+=====================================
 
-COntoh Code 1 :
-
-<?php
-$nama="Meilan";
-function tulisPesan() 
-{
-  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
-}
-tulisPesan($nama);
-?>
-
-==============================
-
-CONTOH CODE 2 :
+Sintaks :
 
 <?php
-$nama="Meilan";
-function tulisPesan($nama) 
+function perkalian($x, $y) 
 {
-  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+    $z = $x * $y;
+    return $z;
 }
-tulisPesan($nama);
+echo "2 * 3 = " . perkalian(2, 3) . "<br>";
 ?>
 
-=============================
+==========================================
 
-CONTOH CODE 3 :
+CODE 1
 
 <?php
-$nama="Meilan";
-function tulisPesan() 
+$alas=10;
+$tinggi=5;
+function luas_segitiga($alas, $tinggi) 
 {
-  global $nama;
-  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+    $luas= $alas * $tinggi/2;
+    return $luas;
 }
-tulisPesan($nama);
+echo "Luas segitiga adalah " . luas_segitiga($alas, $tinggi) . "<br>";
 ?>
 
-============================
+======================================
 
-CONTOH CODE 4 :
+CODE 2
 
 <?php
-function tulisPesan($nama) 
+$alas=10;
+$tinggi=5;
+function luas_segitiga($alas, $tinggi) 
 {
-  $alamat="Bandung";
-  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+    $luas= $alas * $tinggi/2;
 }
-echo $alamat;
-$nama="Meilan";
-tulisPesan($nama);
+echo "Luas segitiga adalah " . luas_segitiga($alas, $tinggi) . "<br>";
 ?>
 
-============================
+===========================================
