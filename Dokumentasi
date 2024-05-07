@@ -1,73 +1,58 @@
-Membuat Fungsi Sendiri 
+Skup Variabel
+
+====================
+
+COntoh Code 1 :
+
+<?php
+$nama="Meilan";
+function tulisPesan() 
+{
+  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+}
+tulisPesan($nama);
+?>
 
 ==============================
 
-https://www.php.net/manual/en/language.functions.php
-
-=================================
-
-Sintaks : 
-
-function namafungsi() 
-{
-   kumpulan kode yang akan dijalankan;
-}
-
-======================
-
-Sintaks 2 :
-
-function namafungsi($parameter) 
-{
-   kumpulan kode yang akan dijalankan ;
-}
-
-=============================
-
-Sintaks 3 :
-
-function namafungsi($parameter1,$parameter2) 
-{
-   kumpulan kode yang akan dijalankan;
-}
-
-============================
-
-Contoh kode 1 :
+CONTOH CODE 2 :
 
 <?php
+$nama="Meilan";
 function tulisPesan($nama) 
 {
   echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
 }
-tulisPesan("Meilan");
-tulisPesan("Naufal");
-tulisPesan("Naura");
-tulisPesan("Mimi");
+tulisPesan($nama);
 ?>
 
-=========================
+=============================
 
-Contoh code 2 :
+CONTOH CODE 3 :
 
 <?php
-echo "Halo Meilan, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
-echo "Halo Naufal, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
-echo "Halo Naura, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
-echo "Halo Mimi, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+$nama="Meilan";
+function tulisPesan() 
+{
+  global $nama;
+  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+}
+tulisPesan($nama);
 ?>
 
-==========================
+============================
 
+CONTOH CODE 4 :
 
+<?php
+function tulisPesan($nama) 
+{
+  $alamat="Bandung";
+  echo "Halo $nama, apa kabarmu Hari ini? Semoga kabarmu sehat dan bahagia selalu<br>";
+}
+echo $alamat;
+$nama="Meilan";
+tulisPesan($nama);
+?>
 
-
-
-
-
-
-
-
-
-
-
+============================
