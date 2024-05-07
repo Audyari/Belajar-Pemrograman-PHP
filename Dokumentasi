@@ -1,45 +1,45 @@
-Mengembalikan Hasil Proses Fungsi
+Parameter Referensi
 
-=====================================
+============================
 
 Sintaks :
 
 <?php
-function perkalian($x, $y) 
+function gantiNama(&$nama)
 {
-    $z = $x * $y;
-    return $z;
+    $nama="Indah";
 }
-echo "2 * 3 = " . perkalian(2, 3) . "<br>";
+$nama="Risa";
+gantiNama($nama);
+echo $nama;
 ?>
 
-==========================================
+=============================
 
-CODE 1
+CODE 2 :
 
 <?php
-$alas=10;
-$tinggi=5;
-function luas_segitiga($alas, $tinggi) 
+function gantiNama(&$nama)
 {
-    $luas= $alas * $tinggi/2;
-    return $luas;
+    $nama="Indah";
 }
-echo "Luas segitiga adalah " . luas_segitiga($alas, $tinggi) . "<br>";
-?>
+$nama="Risa";
+gantiNama($nama);
+echo $nama;
+?> 
 
-======================================
+============================
 
-CODE 2
+CODE 3 : 
 
 <?php
-$alas=10;
-$tinggi=5;
-function luas_segitiga($alas, $tinggi) 
+function gantiNama($nama)
 {
-    $luas= $alas * $tinggi/2;
+    $nama="Indah";
 }
-echo "Luas segitiga adalah " . luas_segitiga($alas, $tinggi) . "<br>";
-?>
+$nama="Risa";
+gantiNama($nama);
+echo $nama;
+?> 
 
-===========================================
+============================
