@@ -1,105 +1,30 @@
-Menyimpan Dalam Format Serialize Dan Json
+Membuat Aplikasi Todo Membuat Template
+======================================
 
-============================================
+buat file index.html :
 
-Mengubah Array dalam bentuk Serialize :
+<h1>Todo App</h1>
+<form action="">
+<label>Daftar Belanja Hari ini<label><br>
+<input type="text" name="todo">
+<button type="submit">Simpan</button>
+</form>
+<ul>
+	<li>
+		<input type="checkbox" name="todo">
+		<label> Todo 1</label>
+		<a href='#'>hapus</a>
+	</li>
+	<li>
+		<input type="checkbox" name="todo">
+		<label> Todo 1</label>
+		<a href='#'>hapus</a>
+	</li>
+	<li>
+		<input type="checkbox" name="todo">
+		<label> Todo 1</label>
+		<a href='#'>hapus</a>
+	</li>
+</ul>
 
-serealize($array);
-
-=======================
-
-CONTOH CODE : 
-
-<?php
-$karyawan	=[
-                ['nama'=>'Toni','alamat'=>'Bandung'],
-                ['nama'=>'Naufal','alamat'=>'Bandung'],
-                ['nama'=>'Davi','alamat'=>'Jakarta']
-			];
-echo serialize($karyawan);
-?>
-
-============================
-
-CONTOH CODE 2 :
-
-<?php
-$karyawan	=[
-                ['nama'=>'Toni','alamat'=>'Bandung'],
-                ['nama'=>'Naufal','alamat'=>'Bandung'],
-                ['nama'=>'Davi','alamat'=>'Jakarta']
-			];
-$data = serialize($karyawan);
-file_put_contents('data.txt',$data);
-?>
-
-=================================
-
-Mengubah Serialize ke dalam bentuk Array :
-
-====================================
-
-unserialize($data_serialized);
-
-=================================
-
-CONTOH CODE :
-
-<?php
-$karyawan	=[
-                ['nama'=>'Toni','alamat'=>'Bandung'],
-                ['nama'=>'Naufal','alamat'=>'Bandung'],
-                ['nama'=>'Davi','alamat'=>'Jakarta']
-			];
-$data = serialize($karyawan);
-file_put_contents('data.txt',$data);
-$output	= file_get_contents('data.txt');
-$hasil	= unserialize($output);
-print_r($hasil);
-?>
-
-===============================
-
-Mengubah Array dalam bentuk JSON
-
-====================================
-
-json_encode($array);
-
-CONTOH CODE NYA :
-
-<?php
-$karyawan	=[
-                ['nama'=>'Toni','alamat'=>'Bandung'],
-                ['nama'=>'Naufal','alamat'=>'Bandung'],
-                ['nama'=>'Davi','alamat'=>'Jakarta']
-			];
-$data = json_encode($karyawan);
-file_put_contents('data.txt',$data);
-?>
-
-=======================================
-
-Mengubah Json ke dalam bentuk Array
-
-json_decode($array);
-
-===========================================
-
-CONTOH CODE NYA : 
-
-<?php
-$karyawan	=[
-                ['nama'=>'Toni','alamat'=>'Bandung'],
-                ['nama'=>'Naufal','alamat'=>'Bandung'],
-                ['nama'=>'Davi','alamat'=>'Jakarta']
-			];
-$data = json_encode($karyawan);
-file_put_contents('data.txt',$data);
-$output	= file_get_contents('data.txt');
-$hasil	= json_decode($output);
-print_r($hasil);
-?>
-
-============================
-
+==========================================================
