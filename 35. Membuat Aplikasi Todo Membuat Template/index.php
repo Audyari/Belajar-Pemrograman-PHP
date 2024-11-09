@@ -1,23 +1,35 @@
 <?php
-// Inisialisasi array untuk menyimpan todo list
+
+/**
+ * Inisialisasi array untuk menyimpan todo list
+ *
+ * @var array $todos
+ */
 $todos = [];
 
-// Membaca isi file 'todo.txt' dan menyimpannya ke variabel $file
-$file = file_get_contents('todo.txt');
+// Membaca file todo.txt dan mengkonversi JSON menjadi array
+if (file_exists('todo.txt')) {
+    // Membaca file todo.txt
+    $file = file_get_contents('todo.txt');
 
-
-// Mengubah string JSON menjadi array
-if ($file !== false) {
-    $todos = json_decode($file, true);
+    // Mengkonversi string JSON menjadi array
+    if ($file !== false) {
+        /**
+         * Mengkonversi string JSON menjadi array
+         *
+         * @param string $file String JSON yang akan dikonversi
+         * @return array Array yang dihasilkan dari konversi
+         */
+        $todos = json_decode($file, true);
+    }
 }
+
 
 
 // Memeriksa apakah ada data todo yang dikirim melalui metode POST
 if (isset($_POST['todo'])) {
     // Mengambil data yang diinput pada form
     $data = $_POST['todo'];
-
-    echo $data;
 
     // Menambahkan data todo baru ke dalam array dengan status awal 0 (belum selesai)
     $todos[] = [
@@ -30,6 +42,13 @@ if (isset($_POST['todo'])) {
 
     // Menulis data serialized ke dalam file todo.txt
     file_put_contents('todo.txt', $daftar_belanja);
+
+    // Redirect ke halaman index.php
+    // Setelah selesai menambahkan data Todo baru, maka
+    // browser akan diarahkan kembali ke halaman index.php
+    // untuk menampilkan daftar Todo yang sudah diupdate
+    header('Location: index.php');
+    exit;
 }
 ?>
 
@@ -86,38 +105,31 @@ if (isset($_POST['todo'])) {
             <button type="submit" class="btn btn-primary">Simpan</button>
         </form>
 
-        <!-- 
-      Daftar item Todo yang ada
-    -->
+
+
         <ul class="list-group mt-3">
             <!-- 
-        Item Todo dengan checkbox dan link hapus
-      -->
-            <li class="list-group-item">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="todo">
-                    <label class="form-check-label">Todo 1</label>
-                </div>
-                <a href="#" class="float-right">hapus</a>
-            </li>
-            <!-- 
-        Item Todo lainnya...
-      -->
-            <li class="list-group-item">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="todo">
-                    <label class="form-check-label">Todo 1</label>
-                </div>
-                <a href="#" class="float-right">hapus</a>
-            </li>
-            <li class="list-group-item">
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" name="todo">
-                    <label class="form-check-label">Todo 1</label>
-                </div>
-                <a href="#" class="float-right">hapus</a>
-            </li>
+            Looping data array $todos yang berisi item Todo
+            dan menampilkan setiap item Todo
+          -->
+            <?php foreach ($todos as $key => $value): ?>
+                <li class="list-group-item">
+                    <!-- 
+                    Membuat input checkbox untuk mengedit status item Todo
+                  -->
+                    <input type="checkbox" name="todo">
+                    <!-- 
+                    Membuat label untuk menampilkan item Todo
+                  -->
+                    <label><?php echo $value['todo']; ?></label>
+                    <!-- 
+                    Membuat link untuk menghapus item Todo
+                  -->
+                    <a href="#" class="float-right">hapus</a>
+                </li>
+            <?php endforeach; ?>
         </ul>
+
     </div>
 
     <!-- 
