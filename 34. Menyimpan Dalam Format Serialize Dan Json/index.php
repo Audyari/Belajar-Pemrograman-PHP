@@ -31,11 +31,17 @@ echo "<pre>";
 
 // JSON
 
+// Simpan data ke file dalam format JSON
 $data = json_encode($karyawan);
 file_put_contents('data1.txt', $data);
+
+// Baca data dari file
 $output    = file_get_contents('data1.txt');
+
+// Konversi data JSON menjadi array
 $hasil    = json_decode($output);
 
+// Tampilkan hasil
 echo "<pre>";
 print_r($hasil);
 echo "<pre>";
@@ -95,3 +101,4 @@ $formattedXmlString = formatXmlString($json);
 echo "<pre>";
 echo $formattedXmlString;
 echo "</pre>";
+
