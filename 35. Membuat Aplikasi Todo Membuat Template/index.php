@@ -50,7 +50,19 @@ if (isset($_POST['todo'])) {
     header('Location: index.php');
     exit;
 }
+
+//jika ditemukan $_GET['status']
+if (isset($_GET['status'])) {
+    //ubah status
+    $todos[$_GET['key']]['status'] = $_GET['status'];
+    $daftar_belanja = json_encode($todos);
+    file_put_contents('todo.txt', $daftar_belanja);
+    //redirect halaman
+    header('location:index.php');
+}
+print_r($todos);
 ?>
+
 
 <!-- 
   Dokumen HTML untuk aplikasi Todo sederhana
@@ -107,6 +119,8 @@ if (isset($_POST['todo'])) {
 
 
 
+
+
         <ul class="list-group mt-3">
             <!-- 
             Looping data array $todos yang berisi item Todo
@@ -114,14 +128,24 @@ if (isset($_POST['todo'])) {
           -->
             <?php foreach ($todos as $key => $value): ?>
                 <li class="list-group-item">
+
                     <!-- 
-                    Membuat input checkbox untuk mengedit status item Todo
-                  -->
-                    <input type="checkbox" name="todo">
-                    <!-- 
-                    Membuat label untuk menampilkan item Todo
-                  -->
-                    <label><?php echo $value['todo']; ?></label>
+                    Membuat input checkbox untuk mengubah status Todo
+                    Ketika input checkbox di klik, maka akan mengarahkan ke halaman index.php
+                    dengan parameter status yang berbeda dan key yang sesuai dengan item Todo yang di klik
+                    -->
+
+                    <input type="checkbox" name="todo" onclick="window.location.href='index.php?status=<?php echo $value['status'] == 1 ? '0' : '1'; ?> &key=<?php echo $key; ?>'" <?php if ($value['status'] == 1) echo 'checked' ?>>
+
+
+                    <label>
+                        <?php
+                        if ($value['status'] == 1) {
+                            echo '<del>' . $value['todo'] . '</del>';
+                        } else {
+                            echo $value['todo'];
+                        }
+                        ?></label>
                     <!-- 
                     Membuat link untuk menghapus item Todo
                   -->
