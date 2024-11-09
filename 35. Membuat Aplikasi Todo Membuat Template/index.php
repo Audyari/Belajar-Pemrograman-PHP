@@ -1,3 +1,38 @@
+<?php
+// Inisialisasi array untuk menyimpan todo list
+$todos = [];
+
+// Membaca isi file 'todo.txt' dan menyimpannya ke variabel $file
+$file = file_get_contents('todo.txt');
+
+
+// Mengubah string JSON menjadi array
+if ($file !== false) {
+    $todos = json_decode($file, true);
+}
+
+
+// Memeriksa apakah ada data todo yang dikirim melalui metode POST
+if (isset($_POST['todo'])) {
+    // Mengambil data yang diinput pada form
+    $data = $_POST['todo'];
+
+    echo $data;
+
+    // Menambahkan data todo baru ke dalam array dengan status awal 0 (belum selesai)
+    $todos[] = [
+        'todo' => $data,
+        'status' => 0
+    ];
+
+    // Menyimpan daftar belanja dalam format serialized
+    $daftar_belanja = json_encode($todos);
+
+    // Menulis data serialized ke dalam file todo.txt
+    file_put_contents('todo.txt', $daftar_belanja);
+}
+?>
+
 <!-- 
   Dokumen HTML untuk aplikasi Todo sederhana
   Menggunakan Bootstrap untuk styling
